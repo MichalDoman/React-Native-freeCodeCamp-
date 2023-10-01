@@ -1,6 +1,7 @@
 import React from "react";
 import {SafeAreaView, Text, ImageBackground, StyleSheet, StatusBar, View} from "react-native";
 import {Feather} from '@expo/vector-icons'
+import IconText from "../component/IconText";
 
 const City = () => {
     return (
@@ -12,14 +13,19 @@ const City = () => {
                 <Text style={[styles.cityText, styles.cityName]}>Warsaw</Text>
                 <Text style={[styles.cityText, styles.countryName]}>PL</Text>
                 <View style={styles.populationWrapper}>
-                    <Feather name={'user'} size={50} color={'red'}/>
-                    <Text style={styles.populationText}>2,000,000</Text>
+                    <IconText iconName={'user'} iconColor={'red'} bodyText={8000} bodyTextStyle={styles.populationText}/>
                 </View>
                 <View style={styles.riseSetWrapper}>
-                    <Feather name={'sunrise'} size={50} color={'white'}/>
-                    <Text style={styles.riseSetText}>10:46:58am</Text>
-                    <Feather name={'sunset'} size={50} color={'white'}/>
-                    <Text style={styles.riseSetText}>17:28:50pm</Text>
+                    <IconText
+                        iconName={'sunrise'}
+                        iconColor={'white'}
+                        bodyText={'10:46:58am'}
+                        bodyTextStyle={styles.riseSetText}/>
+                    <IconText
+                        iconName={'sunset'}
+                        iconColor={'white'}
+                        bodyText={'17:28:50pm'}
+                        bodyTextStyle={styles.riseSetText}/>
                 </View>
             </ImageBackground>
         </SafeAreaView>
@@ -56,7 +62,6 @@ const styles = StyleSheet.create({
         fontSize: 25,
         marginLeft: 7.5,
         color: 'red',
-        fontWeight: 'bold'
     },
     riseSetWrapper: {
         flexDirection: 'row',
@@ -67,7 +72,6 @@ const styles = StyleSheet.create({
     riseSetText: {
         fontSize: 20,
         color: 'white',
-        fontWeight: 'bold'
     }
 })
 export default City
