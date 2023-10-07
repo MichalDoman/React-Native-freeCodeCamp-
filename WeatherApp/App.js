@@ -3,6 +3,7 @@ import {View, StyleSheet, ActivityIndicator} from "react-native";
 import {NavigationContainer} from "@react-navigation/native";
 import Tabs from "./src/component/Tabs";
 import * as Location from 'expo-location'
+import {WEATHER_API_KEY} from '@env'
 
 const App = () => {
     const [loading, setLoading] = useState(true)
