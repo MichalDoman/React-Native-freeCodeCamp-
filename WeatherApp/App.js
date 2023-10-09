@@ -1,15 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import {View, StyleSheet, ActivityIndicator} from "react-native";
 import {NavigationContainer} from "@react-navigation/native";
-import Tabs from "./src/component/Tabs";
-import * as Location from 'expo-location'
-import {WEATHER_API_KEY} from '@env'
+import Tabs from "./src/components/Tabs";
 import {useGetWeather} from "./src/hooks/useGetWeather";
 
 const App = () => {
     const [loading, error, weather] = useGetWeather()
 
-    if (weather && weather.list) {
+    if (weather && weather.list && !loading) {
         return (
             <NavigationContainer>
                 <Tabs weather={weather}/>

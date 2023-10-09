@@ -1,6 +1,6 @@
 import React from 'react'
 import {SafeAreaView, StyleSheet, Text, FlatList, View, StatusBar ,ImageBackground} from "react-native";
-import ListItem from "../component/ListItem";
+import ListItem from "../components/ListItem";
 
 const DATA = [
     {dt_txt: "2023-02-18 12:00:00",

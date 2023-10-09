@@ -1,6 +1,6 @@
 import React from "react";
 import {SafeAreaView, Text, ImageBackground, StyleSheet, StatusBar, View} from "react-native";
-import IconText from "../component/IconText";
+import IconText from "../components/IconText";
 
 const City = () => {
     const {
