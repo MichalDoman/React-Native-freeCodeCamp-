@@ -1,8 +1,9 @@
 import React from "react";
 import {SafeAreaView, Text, ImageBackground, StyleSheet, StatusBar, View} from "react-native";
+import moment from "moment";
 import IconText from "../components/IconText";
 
-const City = () => {
+const City = ({weatherData}) => {
     const {
         container,
         cityName,
@@ -14,27 +15,32 @@ const City = () => {
         imageLayout,
         rowLayout}
         = styles
+    const {name, country, population, sunrise, sunset} = weatherData
     return (
         <SafeAreaView style={container}>
             <ImageBackground
                 source={require('../../assets/city.jpg')}
                 style={imageLayout}
             >
-                <Text style={[cityText, cityName]}>Warsaw</Text>
-                <Text style={[cityText, countryName]}>PL</Text>
+                <Text style={[cityText, cityName]}>{name}</Text>
+                <Text style={[cityText, countryName]}>{country}</Text>
                 <View style={[populationWrapper, rowLayout]}>
-                    <IconText iconName={'user'} iconColor={'red'} bodyText={8000} bodyTextStyle={populationText}/>
+                    <IconText
+                        iconName={'user'}
+                        iconColor={'red'}
+                        bodyText={`Population: ${population}`}
+                        bodyTextStyle={populationText}/>
                 </View>
                 <View style={[riseSetWrapper, rowLayout]}>
                     <IconText
                         iconName={'sunrise'}
                         iconColor={'white'}
-                        bodyText={'10:46:58am'}
+                        bodyText={moment(sunrise).format('h:mm:ss a')}
                         bodyTextStyle={riseSetText}/>
                     <IconText
                         iconName={'sunset'}
                         iconColor={'white'}
-                        bodyText={'17:28:50pm'}
+                        bodyText={moment(sunset).format('h:mm:ss a')}
                         bodyTextStyle={riseSetText}/>
                 </View>
             </ImageBackground>
