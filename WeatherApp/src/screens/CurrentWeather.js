@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
     highLowWrapper: {
-      flexDirection: 'row',
+        flexDirection: 'row',
     },
     highLow: {
         color: 'black',
@@ -81,11 +81,7 @@ const styles = StyleSheet.create({
         paddingLeft: 25,
         marginBottom: 40,
     },
-    description: {
-
-    },
-    message: {
-
-    },
+    description: {},
+    message: {},
 })
 export default CurrentWeather

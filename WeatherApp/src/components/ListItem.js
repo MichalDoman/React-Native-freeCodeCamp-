@@ -7,7 +7,7 @@ import {weatherType} from "../utilities/weatherType";
 const ListItem = (props) => {
     const {dt_txt, min, max, condition} = props
     const {item, temp, date, dateTextWrapper} = styles
-    
+
     return (
         <View style={item}>
             <Feather name={weatherType[condition].icon} size={50} color={'white'}/>

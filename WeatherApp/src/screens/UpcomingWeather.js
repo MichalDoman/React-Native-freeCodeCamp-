@@ -1,5 +1,5 @@
 import React from 'react'
-import {SafeAreaView, StyleSheet, FlatList, StatusBar ,ImageBackground} from "react-native";
+import {SafeAreaView, StyleSheet, FlatList, StatusBar, ImageBackground} from "react-native";
 import ListItem from "../components/ListItem";
 
 const UpcomingWeather = ({weatherData}) => {
@@ -18,11 +18,11 @@ const UpcomingWeather = ({weatherData}) => {
                 source={require('../../assets/upcoming-background.jpg')}
                 style={image}
             >
-            <FlatList
-                data={weatherData}
-                renderItem={renderItem}
-                keyExtractor={(item) => item.dt_txt}
-            />
+                <FlatList
+                    data={weatherData}
+                    renderItem={renderItem}
+                    keyExtractor={(item) => item.dt_txt}
+                />
             </ImageBackground>
         </SafeAreaView>
     )

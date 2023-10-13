@@ -53,13 +53,13 @@ const Tabs = ({weather}) => {
                     )
                 }}
             >
-                {() => <UpcomingWeather weatherData={weather.list} />}
+                {() => <UpcomingWeather weatherData={weather.list}/>}
             </Tab.Screen>
 
             <Tab.Screen
                 name={'City'}
                 options={{
-                    tabBarIcon: ({focused}) =>(
+                    tabBarIcon: ({focused}) => (
                         <Feather
                             name={'home'}
                             size={25}
@@ -68,7 +68,7 @@ const Tabs = ({weather}) => {
                     )
                 }}
             >
-                {() => <City weatherData={weather.city} />}
+                {() => <City weatherData={weather.city}/>}
             </Tab.Screen>
         </Tab.Navigator>
     )

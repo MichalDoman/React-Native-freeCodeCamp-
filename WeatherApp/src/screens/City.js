@@ -13,7 +13,8 @@ const City = ({weatherData}) => {
         riseSetWrapper,
         riseSetText,
         imageLayout,
-        rowLayout}
+        rowLayout
+    }
         = styles
     const {name, country, population, sunrise, sunset} = weatherData
     return (
